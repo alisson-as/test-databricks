@@ -29,7 +29,7 @@ WHERE 1=1
 AND s.astronaut_id IS NOT NULL
 
 GROUP BY
-  s.astronaut_id,
-  s.astronaut_name,
-  s.sex,
-  s.status;
+    s.astronaut_id,
+    s.astronaut_name,
+    s.sex,
+    s.status;
