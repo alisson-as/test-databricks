@@ -62,12 +62,11 @@ SELECT
     current_timestamp() AS silver_load_timestamp,
     input_file_name() AS source_bronze_file
 
-FROM
-    bronze.astronauts.list_astronauts
+FROM bronze.astronauts.list_astronauts
 
 -- Data Quality Filter: Exclude records with critical missing information
 -- to ensure the Silver layer contains only valid, usable data.
-WHERE
-    id IS NOT NULL
-    AND name IS NOT NULL
-    AND year_of_mission IS NOT NULL
+WHERE 1=1
+AND id IS NOT NULL
+AND name IS NOT NULL
+AND year_of_mission IS NOT NULL
